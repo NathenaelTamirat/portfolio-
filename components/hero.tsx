@@ -21,7 +21,7 @@ export default function Hero() {
         const speed = Number.parseFloat((el as HTMLElement).dataset.speed || "1")
         const xOffset = x * 20 * speed
         const yOffset = y * 20 * speed
-        ;(el as HTMLElement).style.transform = translate(${xOffset}px, ${yOffset}px)
+        ;(el as HTMLElement).style.transform = `translate(${xOffset}px, ${yOffset}px)`
       })
     }
 
@@ -104,7 +104,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a
           href="#about"
           className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
